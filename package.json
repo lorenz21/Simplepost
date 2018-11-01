@@ -1,0 +1,30 @@
+{
+  "name": "simplepost",
+  "version": "1.0.0",
+  "description": "A simple web application to post to a wall and comment on post(s)",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorenz21/Simplepost.git"
+  },
+  "author": "Steve Lorenz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lorenz21/Simplepost/issues"
+  },
+  "homepage": "https://github.com/lorenz21/Simplepost#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "sequelize": "^4.41.0"
+  },
+  "devDependencies": {
+    "jasmine": "^3.3.0",
+    "request": "^2.88.0"
+  }
+}

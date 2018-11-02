@@ -1,4 +1,5 @@
 const Post = require("./models").Post;
+const Comment = require("./models").Comment;
 
 module.exports = {
    getAllPosts(callback) {
@@ -21,7 +22,11 @@ module.exports = {
       });
    },
    getPost(id, callback){
-      return Post.findByPk(id)
+      return Post.findByPk(id, {
+        include: [{
+          model: Comment, as : "comments"
+        }]
+      })
       .then((post) => {
          callback(null, post);
       })

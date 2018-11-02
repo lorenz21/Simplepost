@@ -1,0 +1,12 @@
+<% if(comment) { %>
+   <div style="width: 50%">
+     <hr>
+     <p>
+       <%= comment.body %>
+     </p>
+     <small class="card-subtitle mb-2 text-muted">
+       comment created on <%= comment.createdAt %>
+     </small>
+     <hr>
+   </div>
+ <% } %>

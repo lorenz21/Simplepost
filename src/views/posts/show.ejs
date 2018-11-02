@@ -15,6 +15,17 @@
         </div>
 
         <p><%= post.body %></p>
+
+        <% include ../comments/new.ejs -%>
+
+        <section id="comment-list">
+          <% if(post.comments) { %>
+            <% post.comments.forEach((comment) => { %>
+      
+              <%- include("../comments/show.ejs", {comment}) %>
+            <% }) %>
+          <% } %>
+        </section>
    
       </main>
 

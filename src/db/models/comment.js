@@ -1,21 +1,21 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var Post = sequelize.define('Post', {
-    title: {
+  var Comment = sequelize.define('Comment', {
+    body: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    body:{
-      type: DataTypes.STRING,
+    postId: {
+      type: DataTypes.INTEGER,
       allowNull: false
     }
   }, {});
-  Post.associate = function(models) {
+  Comment.associate = function(models) {
     // associations can be defined here
-    Post.hasMany(models.Comment, {
+    Comment.belongsTo(models.Post, {
       foreignKey: "postId",
-      as: "comments"
+      onDelete: "CASCADE"
     });
   };
-  return Post;
+  return Comment;
 };

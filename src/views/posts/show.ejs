@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <%- include('../static/partials/head.ejs') -%>
+    </head>
+    <body>
+      <%- include('../static/partials/navbar.ejs') -%>
+  
+      <main class="container">
+
+        <div style="display: flex; align-items:center;">
+          <h1><%= post.title %></h1>
+        </div>
+
+        <p><%= post.body %></p>
+   
+      </main>
+
+      <%- include('../static/partials/baseScripts.ejs') -%>
+  
+    </body>
+  </html>

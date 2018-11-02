@@ -17,34 +17,34 @@
   git clone https://github.com/lorenz21/Simplepost.git
   ```
 
-1. Change Directories into the project
+2. Change Directories into the project
   ```bash
   cd Simplepost
   ```
 
-1. Use Node to install Dependencies
+3. Use Node to install Dependencies
   ```bash
   npm install
   ```
 
-1. Create PostgreSQL Databases (If you want to change the names you need to update the config.json)
+4. Create PostgreSQL Databases (If you want to change the names you need to update the config.json)
   ```bash
   createdb -U postgres -w simplepost-dev
   createdb -U postgres -w simplepost-test
   ```
 
-1. Build database
+5. Build database
   ```bash
   sequelize db:migrate && sequelize db:migrate --env test
   ```
 
-1. run
+6. run
   ```bash
   npm start 
   # server at http://127.0.0.1:3000/
   ```
 
-1. test
+7. test
   ```bash
   npm test 
   # will test all suites

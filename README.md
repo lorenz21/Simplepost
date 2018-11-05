@@ -32,19 +32,24 @@
   createdb -U postgres -w simplepost-dev
   createdb -U postgres -w simplepost-test
   ```
+  
+5. Install Sequelize ORM(Object-relational mapping) *Globally*
+  ```bash
+  npm install -g sequelize-cli
+  ```
 
-5. Build database
+6. Build database
   ```bash
   sequelize db:migrate && sequelize db:migrate --env test
   ```
 
-6. run
+7. run
   ```bash
   npm start 
   # server at http://127.0.0.1:3000/
   ```
 
-7. test
+8. test
   ```bash
   npm test 
   # will test all suites
